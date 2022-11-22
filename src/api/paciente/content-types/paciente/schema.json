@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pacientes",
+  "info": {
+    "singularName": "paciente",
+    "pluralName": "pacientes",
+    "displayName": "Paciente",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nome": {
+      "type": "string"
+    },
+    "RG": {
+      "type": "string",
+      "unique": true
+    },
+    "NCarteira": {
+      "type": "string"
+    },
+    "Endereco": {
+      "type": "string"
+    },
+    "NResidencial": {
+      "required": true,
+      "type": "integer"
+    },
+    "Complemento": {
+      "type": "string"
+    },
+    "Telefone": {
+      "type": "string",
+      "maxLength": 11,
+      "minLength": 9
+    },
+    "base64": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "CPF": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 11,
+      "maxLength": 11
+    },
+    "consultasId": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::consulta.consulta",
+      "mappedBy": "paciente"
+    }
+  }
+}

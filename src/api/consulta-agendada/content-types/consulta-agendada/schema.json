@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "consulta_agendadas",
+  "info": {
+    "singularName": "consulta-agendada",
+    "pluralName": "consulta-agendadas",
+    "displayName": "ConsultaAgendada",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TipoConsulta": {
+      "type": "string",
+      "required": true
+    },
+    "DataConsulta": {
+      "required": true,
+      "type": "datetime"
+    },
+    "Setor": {
+      "type": "string",
+      "required": true
+    },
+    "Andar": {
+      "type": "string"
+    },
+    "cpf": {
+      "type": "string"
+    }
+  }
+}
